@@ -486,6 +486,28 @@ form input {
   flex-direction: column;
   align-items: center; }
 
+.userLog {
+  width: 80%; }
+  .userLog form {
+    display: grid;
+    gap: 20px;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(1, auto);
+    grid-template-areas: "userLog__formData        userLog__formImg"; }
+    .userLog form .userLog__formImg {
+      grid-area: userLog__formImg; }
+      .userLog form .userLog__formImg img {
+        max-width: 100%;
+        height: 100%; }
+    .userLog form .userLog__formData {
+      grid-area: userLog__formData;
+      display: flex;
+      flex-direction: column;
+      padding: 30px; }
+      .userLog form .userLog__formData img {
+        max-width: 150px;
+        align-self: center; }
+
 .userReg {
   width: 80%; }
   .userReg form {
@@ -508,24 +530,18 @@ form input {
         max-width: 150px;
         align-self: center; }
 
-.userLog {
-  width: 80%; }
+@media screen and (max-width: 768px) {
   .userLog form {
-    display: grid;
-    gap: 20px;
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: repeat(1, auto);
-    grid-template-areas: "userLog__formData        userLog__formImg"; }
-    .userLog form .userLog__formImg {
-      grid-area: userLog__formImg; }
-      .userLog form .userLog__formImg img {
-        max-width: 100%;
-        height: 100%; }
-    .userLog form .userLog__formData {
-      grid-area: userLog__formData;
-      display: flex;
-      flex-direction: column;
-      padding: 30px; }
-      .userLog form .userLog__formData img {
-        max-width: 150px;
-        align-self: center; }
+    grid-template-columns: 1fr;
+    grid-template-areas: "userLog__formImg"         "userLog__formData"; }
+  .userLog .userLog__formImg img {
+    display: none; }
+  .userReg form {
+    grid-template-columns: 1fr;
+    grid-template-areas: "userReg__formImg"         "userReg__formData"; }
+  .userReg .userReg__formImg img {
+    display: none; } }
+
+@media screen and (max-width: 320px) {
+  .userLog, .userReg {
+    width: 90%; } }

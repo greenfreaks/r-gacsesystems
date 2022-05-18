@@ -4,6 +4,35 @@
     align-items: center;
 }
 
+.userLog{
+    width: 80%;
+    form{
+        display: grid;
+        gap: 20px;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(1, auto);
+        grid-template-areas: "userLog__formData        userLog__formImg";
+
+        .userLog__formImg{
+            grid-area: userLog__formImg;
+            img{
+                max-width: 100%;
+                height: 100%;
+            }
+        }
+        .userLog__formData{
+            grid-area: userLog__formData;
+            display: flex;
+            flex-direction: column;
+            padding: 30px;
+            img{
+                max-width: 150px;
+                align-self: center;
+            }
+        }
+    }
+}
+
 .userReg{
     width: 80%;
     form{
@@ -33,31 +62,38 @@
     }
 }
 
-.userLog{
-    width: 80%;
-    form{
-        display: grid;
-        gap: 20px;
-        grid-template-columns: repeat(2, 1fr);
-        grid-template-rows: repeat(1, auto);
-        grid-template-areas: "userLog__formData        userLog__formImg";
+@media screen and (max-width: 768px){
 
+    .userLog{
+        form{
+            grid-template-columns: 1fr;
+            grid-template-areas: 
+            "userLog__formImg"        
+            "userLog__formData";
+        }
         .userLog__formImg{
-            grid-area: userLog__formImg;
             img{
-                max-width: 100%;
-                height: 100%;
+                display: none;
             }
         }
-        .userLog__formData{
-            grid-area: userLog__formData;
-            display: flex;
-            flex-direction: column;
-            padding: 30px;
+    }
+    .userReg{
+        form{
+            grid-template-columns: 1fr;
+            grid-template-areas: 
+            "userReg__formImg"        
+            "userReg__formData";
+        }
+        .userReg__formImg{
             img{
-                max-width: 150px;
-                align-self: center;
+                display: none;
             }
         }
+    }
+}
+
+@media screen and (max-width: 320px){
+    .userLog, .userReg{
+        width: 90%;
     }
 }

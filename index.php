@@ -65,7 +65,7 @@
                     <p class="darkOrangeTx">Contraseña</p>
                     <input type="email" id="userLog__form--email">
 
-                    <button type="submit" class="lgBtn bgDarkOrange whiteTx">Ingresar</button>
+                    <button type="submit" class="smBtn bgDarkOrange whiteTx alignCenter">Ingresar</button>
                     <p class="lightGrayTx alignCenter">¿Aún no tienes una cuenta?</p>
                     <p id="btnRegistrate" class="darkOrangeTx pointer alignCenter">Regístrate</p>
                 </div>
@@ -91,7 +91,7 @@
                     <p class="darkOrangeTx">Confirme su contraseña</p>
                     <input type="password" id="userReg__form--psw2">
 
-                    <button type="submit" class="lgBtn bgDarkBlue whiteTx">Registrarse</button>
+                    <button type="submit" class="smBtn bgDarkBlue whiteTx">Registrarse</button>
 
                     <p class="lightGrayTx alignCenter">¿Ya tienes una cuenta?</p>
                     <p id="btnIngresar" class="darkBlueTx pointer alignCenter">Ingresa</p>

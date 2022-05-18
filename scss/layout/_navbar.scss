@@ -1,6 +1,5 @@
 /*------Nav-------*/
 .header__nav {
-    background-color: $black;
     display: flex;
     justify-content: space-around;
     align-items: center;
@@ -22,8 +21,9 @@
     }
 
     .header__nav--logo {
-        font-size: $generalFontSize * 0.8;
-        letter-spacing: 8px;
+        img{
+            max-width: 100px;
+        }
     }
 
     .header__nav--content {
@@ -33,6 +33,7 @@
 
         a {
             letter-spacing: 1px;
+            color: $black;
 
             /* font-weight: bold; */
             &:hover {
@@ -44,8 +45,7 @@
         }
 
         .active {
-            border-bottom: $orange 5px solid;
-            padding: 5px;
+            color: $orange;
         }
 
         ul {

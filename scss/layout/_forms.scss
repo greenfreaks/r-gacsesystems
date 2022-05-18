@@ -1,0 +1,12 @@
+form{
+    input{
+        text-align: center;
+        border: none;
+        border-bottom: 1px solid $black;
+        margin-bottom: 10px;
+        &:focus{
+            outline: none;
+            border-bottom: 2px solid $orange;
+        }
+    }
+}

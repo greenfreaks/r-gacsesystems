@@ -1,0 +1,76 @@
+/*----------Text colors------------*/
+.orangeTx{
+    color: $orange;
+}
+.darkOrangeTx{
+    color: $darkOrange;
+}
+.lightOrangeTx{
+    color: $lightOrange;
+}
+.blueTx{
+    color: $blue;
+}
+.darkBlueTx{
+    color: $darkBlue;
+}
+.lightBlueTx{
+    color: $lightBlue;
+}
+
+.darkGrayTx{
+    color: $darkGray;
+}
+.lightGrayTx{
+    color: $lightGray;
+}
+.whiteTx{
+    color:$white;
+}
+.blackTx{
+    color: $black;
+}
+
+/*----------Text effects------------*/
+
+.boldTx{
+    font-weight: bold;
+}
+.semiBoldTx{
+    font-weight: 400;
+}
+.lightTx{
+    font-weight: lighter;
+}
+.cTx{
+    text-align: center;
+}
+.rTx{
+    text-align: right;
+}
+.lTx{
+    text-align: left;
+}
+.jTx{
+    text-align: justify;
+}
+.uppercase{
+    text-transform: uppercase;
+}
+.lowercase{
+    text-transform: lowercase;
+}
+.noDecorateTx{
+    text-decoration: none;
+}
+
+/*----------Text aligns------------*/
+.cTx{
+    text-align: center;
+}
+.rTx{
+    text-align: right;
+}
+.lTx{
+    text-align: left;
+}

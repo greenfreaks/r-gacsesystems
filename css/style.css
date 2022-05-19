@@ -394,6 +394,68 @@ body {
   .toggle .header__nav--burger-3 {
     transform: rotate(45deg) translate(-5px, -7px); } }
 
+.sidebarBurgerBtn {
+  position: absolute;
+  top: 15px;
+  left: 45px;
+  height: 45px;
+  width: 45px;
+  text-align: center;
+  border-radius: 3px;
+  cursor: pointer;
+  transition: left 0.4s ease;
+  z-index: 2; }
+  .sidebarBurgerBtn i {
+    color: #141212;
+    line-height: 45px;
+    font-size: 2em; }
+
+.sidebarBurgerBtn.click {
+  left: 260px; }
+  .sidebarBurgerBtn.click i:before {
+    content: '\f00d';
+    color: #ED6E30; }
+
+.sidebar {
+  position: fixed;
+  width: 250px;
+  height: 100%;
+  left: -250px;
+  background-color: #141212;
+  transition: left 0.4s ease;
+  z-index: 3; }
+  .sidebar img {
+    max-width: 150px; }
+  .sidebar .text {
+    font-weight: 600;
+    line-height: 65px;
+    text-align: center;
+    letter-spacing: 1px; }
+  .sidebar ul {
+    background-color: #141212;
+    height: 100%;
+    width: 100%; }
+    .sidebar ul li {
+      line-height: 60px;
+      border-bottom: 1px solid #8190A5; }
+      .sidebar ul li:last-child {
+        border-bottom: 1px solid #ED6E30; }
+      .sidebar ul li a {
+        color: white;
+        text-decoration: none;
+        font-size: 18px;
+        padding-left: 40px;
+        font-weight: 500;
+        display: block;
+        width: 100%;
+        border-left: 3px solid transparent; }
+        .sidebar ul li a:hover {
+          color: #50c497;
+          border-left-color: #50c497; }
+
+.sidebar.show {
+  left: 0; }
+
 footer {
   background-color: #141212;
   font-size: 1.5rem;
@@ -545,3 +607,7 @@ form input {
 @media screen and (max-width: 320px) {
   .userLog, .userReg {
     width: 90%; } }
+
+.appBodyContent {
+  padding: 50px;
+  padding-left: 150px; }

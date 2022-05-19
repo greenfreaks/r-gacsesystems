@@ -542,6 +542,43 @@ form input {
     outline: none;
     border-bottom: 2px solid #ED6E30; }
 
+form textarea {
+  min-width: 100%;
+  max-width: 100%;
+  min-height: 150px;
+  max-height: 220px;
+  padding: 20px; }
+  form textarea:focus {
+    outline: none;
+    border: 2px solid #ED6E30; }
+
+form select {
+  font-size: 1.2rem;
+  background-color: white;
+  border: none;
+  border-bottom: solid 2px #168057;
+  margin-bottom: 15px; }
+  form select:focus {
+    outline: none;
+    border-bottom: 2px solid #ED6E30; }
+
+.appBodyContent {
+  padding: 50px;
+  padding-left: 115px;
+  display: flex;
+  flex-direction: column;
+  align-items: center; }
+
+@media screen and (max-width: 768px) {
+  .appBodyContent {
+    padding: 40px;
+    padding-top: 70px; } }
+
+@media screen and (max-width: 320px) {
+  .appBodyContent {
+    padding: 20px;
+    padding-top: 60px; } }
+
 /*Views*/
 .formsContainer {
   display: flex;
@@ -608,26 +645,16 @@ form input {
   .userLog, .userReg {
     width: 90%; } }
 
-.cardsBodyContent {
-  padding: 50px;
-  padding-left: 115px;
-  display: flex;
-  align-items: center; }
-  .cardsBodyContent .cardSection {
-    display: grid;
-    gap: 1.75rem;
-    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); }
-    .cardsBodyContent .cardSection .card {
-      display: flex;
-      flex-wrap: wrap;
-      height: 300px;
-      padding: 20px;
-      box-shadow: 0 0 5px 0px #aaa8a8; }
-
-@media screen and (max-width: 768px) {
-  .cardsBodyContent {
-    padding: 40px;
-    padding-top: 70px; } }
+.cardSection {
+  display: grid;
+  gap: 1.75rem;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); }
+  .cardSection .card {
+    display: flex;
+    flex-wrap: wrap;
+    height: 300px;
+    padding: 20px;
+    box-shadow: 0 0 5px 0px #aaa8a8; }
 
 @media screen and (max-width: 480px) {
   .cardsBodyContent {
@@ -635,7 +662,24 @@ form input {
     .cardsBodyContent .cardSection .card {
       height: 250px; } }
 
+.agendar {
+  width: 80%; }
+  .agendar .agendarForm {
+    border-top: 80px solid #50c497;
+    display: flex;
+    flex-direction: column;
+    padding: 80px; }
+
+@media screen and (max-width: 768px) {
+  .agendar {
+    width: 100%; } }
+
+@media screen and (max-width: 480px) {
+  .agendar .agendarForm {
+    border-top: 50px solid #50c497;
+    padding: 50px; } }
+
 @media screen and (max-width: 320px) {
-  .cardsBodyContent {
-    padding: 20px;
-    padding-top: 60px; } }
+  .agendar .agendarForm {
+    border-top: 30px solid #50c497;
+    padding: 20px; } }

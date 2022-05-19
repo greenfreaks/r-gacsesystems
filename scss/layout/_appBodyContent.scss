@@ -1,0 +1,21 @@
+.appBodyContent{
+    padding: 50px;
+    padding-left: 115px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+@media screen and (max-width: 768px) {
+    .appBodyContent {
+        padding: 40px;
+        padding-top: 70px;
+    }
+}
+
+@media screen and (max-width: 320px) {
+    .appBodyContent {
+        padding: 20px;
+        padding-top: 60px;
+    }
+}

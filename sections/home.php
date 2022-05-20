@@ -48,7 +48,8 @@ else{
   <div class="sidebar">
     <img src="../assets/img/index-logo-min.png" class="alignCenter" alt="">
     <div class="text whiteTx">
-      <h4>Doctor/a: </h4>
+      <h6>Médico:</h6>
+      <h5><?php echo $user['name_medico']?></h5>
     </div>
     <ul class="noList">
       <li><a href="#" class="orangeTx">Citas próximas</a></li>

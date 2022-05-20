@@ -60,6 +60,7 @@ else{
     <div class="appBodyContent">
         <section class="agendar">
             <form id="agendarForm" class="agendarForm boxShadow">
+                <input type="hidden" id="action" value="agendar">
                 <h1 class="darkBlueTx alignCenter">Registro de Cita</h1>
                 <h5> <i class="fas fa-user-injured"></i> Nombre del paciente</h5>
                 <input type="text" id="agendarForm__nombre" name="nombre">
@@ -77,10 +78,10 @@ else{
                 <input type="text" id="agendarForm__telefono" name="telefono">
 
                 <h5> <i class="fas fa-at"></i> E-mail</h5>
-                <input type="text" id="agendarForm__mail" name="mail">
+                <input type="text" id="agendarForm__email" name="mail">
 
                 <h5> <i class="fas fa-ballot-check"></i> Medio de contacto en que solicitó la cita</h5>
-                <select id="agendarForm__medio" name="medio">
+                <select id="agendarForm__medioContacto" name="medio">
                     <option disabled>Selecciona una opción</option>
                     <option value="Teléfono">Teléfono</option>
                     <option value="Email">Email</option>
@@ -88,15 +89,15 @@ else{
                 </select>
 
                 <h5> <i class="fas fa-calendar-day"></i> Día de la cita</h5>
-                <input type="date">
+                <input type="date" id="agendarForm__fecha">
 
                 <h5> <i class="fas fa-clock"></i> Hora de la cita</h5>
-                <input type="time">
+                <input type="time" id="agendarForm__hora">
 
                 <h5> <i class="fas fa-pen-alt"></i> Observaciones</h5>
                 <textarea name="observaciones" id="agendarForm__observaciones"></textarea>
 
-                <input type="submit" class="smBtn bgDarkBlue whiteTx" value="Agendar">
+                <input type="submit" onclick="agendar();" id="agendarForm__submit" class="smBtn bgDarkBlue whiteTx" value="Agendar">
             </form>
         </section>
     </div>
@@ -109,6 +110,7 @@ else{
         integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous">
     </script>
     <script src="../js/sidebar.js"></script>
+    <script src="../js/agendarCita.js"></script>
 </body>
 
 </html>

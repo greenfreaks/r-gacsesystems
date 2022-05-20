@@ -26,13 +26,14 @@ function register(){
 
   $user = mysqli_query($con, "SELECT * FROM medicos WHERE email_medico = '$email_medico'");
   if(mysqli_num_rows($user) > 0){
-    echo "Username Has Already Taken";
+    echo "User Has Already Taken";
     exit;
   }
 
   $query = "INSERT INTO `medicos` (`id_medico`, `name_medico`, `email_medico`, `pwd_medico`, `createdAT`, `modifiedAt`) VALUES (NULL, '$name_medico', '$email_medico', '$pwd_medico', current_timestamp(), NULL);";
   mysqli_query($con, $query);
   echo "Registration Successful";
+  exit;
 }
 
 // LOGIN
@@ -40,7 +41,7 @@ function login(){
   global $con;
 
   $email_medico = $_POST["email_medico"];
-  $pwd_medico = $_POST["pwd_medico"];
+  $pwd_medico = $_POST["pwd_medico_log"];
 
   $user = mysqli_query($con, "SELECT * FROM medicos WHERE email_medico = '$email_medico'");
 

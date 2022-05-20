@@ -26,6 +26,9 @@ if(isset($_SESSION["id_medico"])){
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
 
+    <!-- ALERTIFY CSS -->
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/alertifyjs@1.13.1/build/css/alertify.min.css" />
+
 
     <link rel="stylesheet" href="css/style.css">
 
@@ -60,26 +63,25 @@ if(isset($_SESSION["id_medico"])){
     <div class="formsContainer">
         <section id="userReg" class="userReg boxShadow">
             <form id="userReg__form" class="userReg__form">
-                <input type="hidden" id="action" value="register">
+                <input type="hidden" id="action" value="register" required>
                 <div class="userReg__formImg">
                     <img src="assets/img/index-reg-min.png" alt="">
                 </div>
                 <div class="userReg__formData">
                     <img src="assets/img/index-logo-min.png" alt="">
                     <p class="darkOrangeTx">Nombre Completo</p>
-                    <input type="text" id="medico_name">
+                    <input type="text" class="medico_name" required>
 
                     <p class="darkOrangeTx">Email</p>
-                    <input type="email" id="medico_email">
+                    <input type="email" class="medico_email" required>
 
                     <p class="darkOrangeTx">Contraseña</p>
-                    <input type="password" id="medico_pdw1">
+                    <input type="password" class="medico_pdw1" required>
 
                     <p class="darkOrangeTx">Confirme su contraseña</p>
-                    <input type="password" id="medico_pdw2">
+                    <input type="password" class="medico_pdw2" required>
 
-                    <button type="button" onclick="submitData();"
-                        class="smBtn bgDarkBlue whiteTx">Registrarse</button>
+                    <button type="button" class="btnRegLog smBtn bgDarkBlue whiteTx">Registrarse</button>
                     <!-- <input type="submit" name ="submit" value="Enviar"> -->
 
                     <p class="lightGrayTx alignCenter">¿Ya tienes una cuenta?</p>
@@ -96,8 +98,17 @@ if(isset($_SESSION["id_medico"])){
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"
         integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous">
     </script>
+
+
+    <!-- ALERTIFY JS -->
+    <script src="//cdn.jsdelivr.net/npm/alertifyjs@1.13.1/build/alertify.min.js"></script>
+
+    <!-- SWEET ALERT JS -->
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
     <script src="js/nav.js"></script>
     <script src="js/login_registro.js"></script>
+
 </body>
 
 </html>

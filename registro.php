@@ -58,28 +58,36 @@ if(isset($_SESSION["id_medico"])){
     <div class="space"></div>
 
     <div class="formsContainer">
-        <section id="userLog" class="userLog boxShadow">
-            <form id="userLog__form" class="userLog__form">
-                <input type="hidden" id="action" value="login">
-                <div class="userLog__formImg">
-                    <img src="assets/img/index-login-min.png" alt="">
+        <section id="userReg" class="userReg boxShadow">
+            <form id="userReg__form" class="userReg__form">
+                <input type="hidden" id="action" value="register">
+                <div class="userReg__formImg">
+                    <img src="assets/img/index-reg-min.png" alt="">
                 </div>
-                <div class="userLog__formData">
+                <div class="userReg__formData">
                     <img src="assets/img/index-logo-min.png" alt="">
+                    <p class="darkOrangeTx">Nombre Completo</p>
+                    <input type="text" id="medico_name">
+
                     <p class="darkOrangeTx">Email</p>
                     <input type="email" id="medico_email">
 
                     <p class="darkOrangeTx">Contraseña</p>
                     <input type="password" id="medico_pdw1">
 
-                    <button type="button" onclick="submitData();"
-                        class="smBtn bgDarkOrange whiteTx alignCenter">Ingresar</button>
+                    <p class="darkOrangeTx">Confirme su contraseña</p>
+                    <input type="password" id="medico_pdw2">
 
-                    <p class="lightGrayTx alignCenter">¿Aún no tienes una cuenta?</p>
-                    <a href="registro.php" class="noDecoration darkOrangeTx pointer alignCenter">Regístrate</a>
+                    <button type="button" onclick="submitData();"
+                        class="smBtn bgDarkBlue whiteTx">Registrarse</button>
+                    <!-- <input type="submit" name ="submit" value="Enviar"> -->
+
+                    <p class="lightGrayTx alignCenter">¿Ya tienes una cuenta?</p>
+                    <a href="index.php" class="darkBlueTx pointer alignCenter noDecoration">Ingresa</a>
                 </div>
             </form>
         </section>
+
     </div>
     <footer class="whiteTx">
 

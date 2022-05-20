@@ -1,14 +1,16 @@
 <?php
-	$host = 'localhost';
-	$user = 'root';
-	$password = '';
-	$db = 'tecnotr1_bd_tbr_plataforma';
+session_start();
 
-	$connection = @mysqli_connect($host, $user, $password, $db);
-	if(!$connection){
-		echo "Error en la conexión";
-	}/*else{
-		echo "Conexión exitosa";
-    }*/
-	$connection -> set_charset("utf8");
+$host = "localhost";
+$user = "root";
+$pass = "";
+$db = "dr_reminder";
+
+$con = mysqli_connect($host, $user, $pass, $db);
+
+// if($con){
+//     echo "Conexión exitosa";
+// }else{
+//     echo "Falló conexión";
+// }
 ?>

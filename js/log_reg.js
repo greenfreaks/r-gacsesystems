@@ -16,4 +16,3 @@ btnIngresar.onclick = () =>{
     formLog.style.display = "block";
 }
 
-

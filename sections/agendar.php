@@ -1,3 +1,13 @@
+<?php
+require '../php/login_registro.php';
+if(isset($_SESSION["id_medico"])){
+  $id_medico = $_SESSION["id_medico"];
+  $user = mysqli_fetch_assoc(mysqli_query($conn, "SELECT * FROM medicos WHERE id_medico = $id_medico"));
+}
+else{
+  header("Location: ../index.php");
+}
+?>
 <!DOCTYPE html>
 <html lang="en">
 

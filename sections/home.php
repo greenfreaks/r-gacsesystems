@@ -1,4 +1,8 @@
 <?php
+ini_set('display_errors','Off');
+ini_set('error_reporting', E_ALL );
+define('WP_DEBUG', false);
+define('WP_DEBUG_DISPLAY', false);
 require '../php/login_registro.php';
 if(isset($_SESSION["id_medico"])){
   $id_medico = $_SESSION["id_medico"];
@@ -37,86 +41,14 @@ else{
 </head>
 
 <body>
+  <!-- Se llama a la plantilla del sidenav -->
   <?php include "../view-templates/sidenav.php"?>
+
   <div class="appBodyContent">
     <section class="cardSection">
-      <div class="card">
-        <div class="cardHeader">
-          <div class="cardTitle">
-            <h4 class="orangeTx">Título</h4>
-          </div>
-          <div class="cardBody">
-            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eos, qui dolore totam commodi inventore dolor
-              laboriosam laborum odit saepe! Nesciunt vero enim maxime, ipsa voluptas debitis illo dicta ad rerum!
-            </p>
 
-            <a href="">algo</a>
-          </div>
-
-          <div class="cardFooter">
-            <p>2 de febrero 2020</p>
-          </div>
-        </div>
-      </div>
-
-      <div class="card">
-        <div class="cardHeader">
-          <div class="cardTitle">
-            <h4 class="orangeTx">Título</h4>
-          </div>
-          <div class="cardBody">
-            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eos, qui dolore totam commodi inventore dolor
-              laboriosam laborum odit saepe! Nesciunt vero enim maxime, ipsa voluptas debitis illo dicta ad rerum!
-            </p>
-
-            <a href="">algo</a>
-          </div>
-
-          <div class="cardFooter">
-            <p>2 de febrero 2020</p>
-          </div>
-        </div>
-      </div>
-
-      <div class="card">
-        <div class="cardHeader">
-          <div class="cardTitle">
-            <h4 class="orangeTx">Título</h4>
-          </div>
-          <div class="cardBody">
-            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eos, qui dolore totam commodi inventore dolor
-              laboriosam laborum odit saepe! Nesciunt vero enim maxime, ipsa voluptas debitis illo dicta ad rerum!
-            </p>
-
-            <a href="">algo</a>
-          </div>
-
-          <div class="cardFooter">
-            <p>2 de febrero 2020</p>
-          </div>
-        </div>
-      </div>
-
-      <div class="card">
-        <div class="cardHeader">
-          <div class="cardTitle">
-            <h4 class="orangeTx">Título</h4>
-          </div>
-          <div class="cardBody">
-            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eos, qui dolore totam commodi inventore dolor
-              laboriosam laborum odit saepe! Nesciunt vero enim maxime, ipsa voluptas debitis illo dicta ad rerum!
-            </p>
-
-            <a href="">algo</a>
-          </div>
-
-          <div class="cardFooter">
-            <p>2 de febrero 2020</p>
-          </div>
-        </div>
-      </div>
-
-
+      <!-- Citas generadas dinámicamente desde el siguiente archivo: -->
+      <?php include "../php/citasAgendadas.php";?>
 
     </section>
   </div>

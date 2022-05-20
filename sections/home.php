@@ -2,7 +2,7 @@
 require '../php/login_registro.php';
 if(isset($_SESSION["id_medico"])){
   $id_medico = $_SESSION["id_medico"];
-  $user = mysqli_fetch_assoc(mysqli_query($conn, "SELECT * FROM medicos WHERE id_medico = $id_medico"));
+  $user = mysqli_fetch_assoc(mysqli_query($con, "SELECT * FROM medicos WHERE id_medico = $id_medico"));
 }
 else{
   header("Location: ../index.php");
@@ -52,9 +52,9 @@ else{
     </div>
     <ul class="noList">
       <li><a href="#" class="orangeTx">Citas próximas</a></li>
-      <li><a href="agendar.html">Crear Cita</a></li>
+      <li><a href="agendar.php">Crear Cita</a></li>
       <li><a href="#">Ver registro de citas</a></li>
-      <li><a href="#">Cerrar sesión</a></li>
+      <li><a href="../php/logout.php">Cerrar sesión</a></li>
     </ul>
   </div>
   <div class="appBodyContent">

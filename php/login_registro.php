@@ -39,16 +39,16 @@ function register(){
 function login(){
   global $con;
 
-  $username = $_POST["username"];
-  $password = $_POST["password"];
+  $email_medico = $_POST["email_medico"];
+  $pwd_medico = $_POST["pwd_medico"];
 
-  $user = mysqli_query($con, "SELECT * FROM medicos WHERE email_medico = '$username'");
+  $user = mysqli_query($con, "SELECT * FROM medicos WHERE email_medico = '$email_medico'");
 
   if(mysqli_num_rows($user) > 0){
 
     $row = mysqli_fetch_assoc($user);
 
-    if($password == $row['password']){
+    if($pwd_medico == $row['pwd_medico']){
       echo "Login Successful";
       $_SESSION["login"] = true;
       $_SESSION["id_medico"] = $row["id_medico"];

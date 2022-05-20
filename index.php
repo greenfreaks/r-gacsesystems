@@ -70,7 +70,7 @@ if(isset($_SESSION["id_medico"])){
                     <input type="email" id="medico_email">
 
                     <p class="darkOrangeTx">Contraseña</p>
-                    <input type="password" id="medico_pwd">
+                    <input type="password" id="medico_pdw1">
 
                     <button type="button" onclick="submitData();"
                         class="smBtn bgDarkOrange whiteTx alignCenter">Ingresar</button>

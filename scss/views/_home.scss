@@ -9,6 +9,24 @@
         height: 300px;
         padding: 20px;
         box-shadow: 0 0 5px 0px #aaa8a8;
+        .cardBody{
+            .cardBody__observaciones{
+                display: inline-block;
+                width: 1200px;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .cardsBodyContent {
+        padding-top: 80px;
+
+        .cardSection {
+            .card {
+                height: 250px;
+            }
+        }
 
     }
 }
@@ -19,6 +37,7 @@
 
         .cardSection {
             .card {
+                max-width: 1200px;
                 height: 250px;
             }
         }

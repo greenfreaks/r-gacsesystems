@@ -10,4 +10,5 @@
 <!-- SWEET ALERT JS -->
 <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 <script src="../js/sidebar.js"></script>
+<script src="../js/nav.js"></script>
 <script src="../js/agendarCita.js"></script>

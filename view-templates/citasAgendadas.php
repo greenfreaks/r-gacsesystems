@@ -12,7 +12,13 @@ if($total_citas >= 1){
                     <h4 class="orangeTx"><?php echo $citas['nombre_paciente'] . " " . $citas["apellido_paciente"];?></h4>
                 </div>
                 <div class="cardBody">
-                    <p class="cardBody__observaciones"><?php echo $citas['observaciones']?></p>
+                    <b>Observaciones:</b>
+                    <div class="cardBody__observaciones">
+                        <?php echo $citas['observaciones'] ?>
+                    </div>
+                    <div class="cardBody__datos">
+                        <p>Nombre <></p>
+                    </div>
                     <p><b> Fecha de cita: </b><?php echo $citas['fecha_cita'];?></p>
                     <p><b> Hora: </b><?php echo $citas["hora_cita"];?></p>
                     <p><b> Estatus: </b><?php echo $citas["nombre_estatus"];?></p>

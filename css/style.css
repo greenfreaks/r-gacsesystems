@@ -421,7 +421,7 @@ body {
   width: 250px;
   height: 100%;
   left: -250px;
-  background-color: #141212;
+  background-color: #FAFAFA;
   transition: left 0.4s ease;
   z-index: 3; }
   .sidebar img {
@@ -432,7 +432,7 @@ body {
     text-align: center;
     letter-spacing: 1px; }
   .sidebar ul {
-    background-color: #141212;
+    background-color: #FAFAFA;
     height: 100%;
     width: 100%; }
     .sidebar ul li {
@@ -441,7 +441,7 @@ body {
       .sidebar ul li:last-child {
         border-bottom: 1px solid #ED6E30; }
       .sidebar ul li a {
-        color: white;
+        color: #141212;
         text-decoration: none;
         font-size: 18px;
         padding-left: 40px;
@@ -464,11 +464,11 @@ footer {
   align-items: center; }
   footer .footer__logo {
     text-align: center;
-    padding-top: 200px; }
+    padding-top: 100px; }
     footer .footer__logo h2 {
       letter-spacing: 20px;
       font-size: 2.2em;
-      color: #ED6E30; }
+      color: #168057; }
   footer .footer__social {
     padding: 0 50px 200px;
     width: 30%; }
@@ -485,7 +485,7 @@ footer {
   footer .footer__credits {
     width: 100%;
     background-color: #141212;
-    padding: 30px 0; }
+    padding: 10px 0; }
     footer .footer__credits ul {
       display: flex;
       justify-content: space-around; }
@@ -495,7 +495,7 @@ footer {
           font-size: 0.66667em; }
         footer .footer__credits ul li a {
           text-decoration: none;
-          color: #ED6E30; }
+          color: #168057; }
 
 @media screen and (max-width: 768px) {
   footer .footer__logo {
@@ -533,34 +533,34 @@ footer {
       display: block;
       text-align: center; } }
 
-form input {
-  text-align: center;
-  border: none;
-  border-bottom: 1px solid #141212;
-  margin-bottom: 10px; }
-  form input:focus {
-    outline: none;
-    border-bottom: 2px solid #ED6E30; }
-
-form textarea {
-  min-width: 100%;
-  max-width: 100%;
-  min-height: 150px;
-  max-height: 220px;
-  padding: 20px; }
-  form textarea:focus {
-    outline: none;
-    border: 2px solid #ED6E30; }
-
-form select {
-  font-size: 1.2rem;
-  background-color: white;
-  border: none;
-  border-bottom: solid 2px #168057;
-  margin-bottom: 15px; }
-  form select:focus {
-    outline: none;
-    border-bottom: 2px solid #ED6E30; }
+form {
+  width: 100%; }
+  form input {
+    text-align: center;
+    border: none;
+    border-bottom: 1px solid #141212;
+    margin-bottom: 10px; }
+    form input:focus {
+      outline: none;
+      border-bottom: 2px solid #ED6E30; }
+  form textarea {
+    min-width: 100%;
+    max-width: 100%;
+    min-height: 150px;
+    max-height: 220px;
+    padding: 20px; }
+    form textarea:focus {
+      outline: none;
+      border: 2px solid #ED6E30; }
+  form select {
+    font-size: 1.2rem;
+    background-color: white;
+    border: none;
+    border-bottom: solid 2px #168057;
+    margin-bottom: 15px; }
+    form select:focus {
+      outline: none;
+      border-bottom: 2px solid #ED6E30; }
 
 .appBodyContent {
   padding: 50px;
@@ -646,24 +646,33 @@ form select {
     width: 90%; } }
 
 .cardSection {
+  width: 100%;
   display: grid;
   gap: 1.75rem;
   grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); }
   .cardSection .card {
     display: flex;
     flex-wrap: wrap;
-    height: 300px;
+    height: 400px;
     padding: 20px;
     box-shadow: 0 0 5px 0px #aaa8a8; }
     .cardSection .card .cardBody .cardBody__observaciones {
-      display: inline-block;
-      width: 1200px; }
+      max-width: 350px;
+      max-height: 100px;
+      overflow-y: scroll; }
+  .cardSection a {
+    text-align: center; }
 
 @media screen and (max-width: 768px) {
   .cardsBodyContent {
     padding-top: 80px; }
     .cardsBodyContent .cardSection .card {
-      height: 250px; } }
+      height: 250px; }
+      .cardsBodyContent .cardSection .card .cardBody .cardBody__observaciones {
+        max-width: 100px;
+        max-height: 100px;
+        overflow-y: scroll;
+        overflow-x: hidden; } }
 
 @media screen and (max-width: 480px) {
   .cardsBodyContent {

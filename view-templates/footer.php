@@ -1,6 +1,6 @@
 <footer class="whiteTx">
         <div class="footer__logo">
-            <h2>GREEN FREAKS</h2>
+            <h2>g.SYSTEMS</h2>
         </div>
         <div class="footer__social">
             <ul>

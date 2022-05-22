@@ -35,13 +35,13 @@
         
         a {
             letter-spacing: 1px;
-            color: $black;
+            color: $darkBlue;
 
             /* font-weight: bold; */
             &:hover {
                 transform: translateY(-50px);
                 transition: all 0.5s;
-                color: $orange;
+                color: $blue;
                 padding: 15px;
             }
         }
@@ -73,7 +73,7 @@
         height: 92vh;
         top: 11vh;
         flex-direction: column;
-        background-color: $black;
+        background-color: $white;
         align-items: center;
         width: 100%;
         transform: translateX(100%);

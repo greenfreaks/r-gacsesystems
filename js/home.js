@@ -56,7 +56,7 @@ $(document).ready(function () {
             type: 'post',
             data: data,
             success: function (response) {
-                alert(response);
+                // alert(response);
                 console.log(response);
                 if (response == "Scheduled appointment") {
                     Swal.fire({
@@ -80,7 +80,5 @@ $(document).ready(function () {
                 }
             }
         }); //End Ajax
-    });
-
-
+    }); // End Function Modal agregar
 }) // End Document ready

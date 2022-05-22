@@ -23,6 +23,7 @@
 
         <section class="cardSection row">
             <?php include "../include-views/dynamic-views/Home_cardsCitas.php";?>
+            
             <!-- Citas generadas dinámicamente desde el siguiente archivo: -->
         </section>
     </div>

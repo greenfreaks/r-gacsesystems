@@ -43,11 +43,11 @@ if(isset($_SESSION["id_medico"])){
             </div>
             <ul class="header__nav--content noList">
                 <li><a href="#" class="noDecoration active orangeTx boldTx">Inicio</a></li>
-                <li><a href="sections/slider_web.html" class="noDecoration blackTx">Servicios</a></li>
-                <li><a href="sections/contacto.html" class="noDecoration blackTx">Contacto</a></li>
+                <li><a href="#" class="noDecoration blackTx">Servicios</a></li>
+                <li><a href="#" class="noDecoration blackTx">Contacto</a></li>
                 <ul class="noList">
-                    <li><a href="" class="noDecoration whiteTx">LogIn</a> <b class="whiteTx">/</b>
-                        <a href="" class="noDecoration whiteTx">Registrate</a></li>
+                    <li><a href="index.php" class="noDecoration whiteTx">LogIn</a> <b class="orangeTx">/</b>
+                        <a href="registro.php" class="noDecoration whiteTx">Registrate</a></li>
                 </ul>
             </ul>
             <div class="header__nav--burger">
@@ -83,9 +83,8 @@ if(isset($_SESSION["id_medico"])){
             </form>
         </section>
     </div>
-    <footer class="whiteTx">
-
-    </footer>
+    <div class="space"></div>
+    <?php include "include-views/template-views/footer.php"?>
 
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"
         integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous">

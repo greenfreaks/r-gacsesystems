@@ -26,6 +26,9 @@ if(isset($_SESSION["id_medico"])){
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
 
+    <!-- ALERTIFY CSS -->
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/alertifyjs@1.13.1/build/css/alertify.min.css" />
+
 
     <link rel="stylesheet" href="css/style.css">
 
@@ -40,11 +43,11 @@ if(isset($_SESSION["id_medico"])){
             </div>
             <ul class="header__nav--content noList">
                 <li><a href="#" class="noDecoration active orangeTx boldTx">Inicio</a></li>
-                <li><a href="sections/slider_web.html" class="noDecoration blackTx">Servicios</a></li>
-                <li><a href="sections/contacto.html" class="noDecoration blackTx">Contacto</a></li>
+                <li><a href="#" class="noDecoration blackTx">Servicios</a></li>
+                <li><a href="#" class="noDecoration blackTx">Contacto</a></li>
                 <ul class="noList">
-                    <li><a href="" class="noDecoration whiteTx">LogIn</a> <b class="whiteTx">/</b>
-                        <a href="" class="noDecoration whiteTx">Registrate</a></li>
+                    <li><a href="index.php" class="noDecoration whiteTx">LogIn</a> <b class="orangeTx">/</b>
+                        <a href="registro.php" class="noDecoration whiteTx">Registrate</a></li>
                 </ul>
             </ul>
             <div class="header__nav--burger">
@@ -67,13 +70,12 @@ if(isset($_SESSION["id_medico"])){
                 <div class="userLog__formData">
                     <img src="assets/img/index-logo-min.png" alt="">
                     <p class="darkOrangeTx">Email</p>
-                    <input type="email" id="medico_email">
+                    <input type="email" class="medico_email" required>
 
                     <p class="darkOrangeTx">Contraseña</p>
-                    <input type="password" id="medico_pdw1">
+                    <input type="password" class="medico_pdw_log" required>
 
-                    <button type="button" onclick="submitData();"
-                        class="smBtn bgDarkOrange whiteTx alignCenter">Ingresar</button>
+                    <button type="button" class="btnRegLog smBtn bgDarkOrange whiteTx alignCenter">Ingresar</button>
 
                     <p class="lightGrayTx alignCenter">¿Aún no tienes una cuenta?</p>
                     <a href="registro.php" class="noDecoration darkOrangeTx pointer alignCenter">Regístrate</a>
@@ -81,13 +83,18 @@ if(isset($_SESSION["id_medico"])){
             </form>
         </section>
     </div>
-    <footer class="whiteTx">
-
-    </footer>
+    <div class="space"></div>
+    <?php include "include-views/template-views/footer.php"?>
 
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"
         integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous">
     </script>
+    <!-- ALERTIFY JS -->
+    <script src="//cdn.jsdelivr.net/npm/alertifyjs@1.13.1/build/alertify.min.js"></script>
+
+    <!-- SWEET ALERT JS -->
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
     <script src="js/nav.js"></script>
     <script src="js/login_registro.js"></script>
 </body>

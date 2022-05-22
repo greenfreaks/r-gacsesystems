@@ -1,46 +1,51 @@
-.cardSection {
-    display: grid;
-    gap: 1.75rem;
-    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+.cardSection{
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    width: 100%;
+    min-width: 100%;
 
-    .card {
-        display: flex;
-        flex-wrap: wrap;
-        height: 300px;
+    .card{
         padding: 20px;
-        box-shadow: 0 0 5px 0px #aaa8a8;
+        margin: 20px;
+        width: 30%;
+        max-width: 30%;
+        height: 300px;
+        min-height: 300px;
+        overflow-y: hidden;
+        border-top: $blue solid 20px;
+        border-bottom: $darkBlue solid 5px;
+
+        .cardTitle{
+            border-bottom: 1px solid $lightGray;
+            margin-bottom: 20px;
+        }
         .cardBody{
-            .cardBody__observaciones{
-                display: inline-block;
-                width: 1200px;
-            }
+            display: flex;
+            justify-content: space-around;
         }
     }
 }
 
-@media screen and (max-width: 768px) {
-    .cardsBodyContent {
-        padding-top: 80px;
-
-        .cardSection {
-            .card {
-                height: 250px;
-            }
+@media screen and(max-width: 768px){
+    .cardSection{
+        justify-content:space-between;
+        .card{
+            margin: 10px;
+            width: 47%;
+            max-width: 47%;
         }
-
-    }
+    }      
 }
 
-@media screen and (max-width: 480px) {
-    .cardsBodyContent {
-        padding-top: 80px;
-
-        .cardSection {
-            .card {
-                max-width: 1200px;
-                height: 250px;
-            }
+@media screen and(max-width: 480px){
+    .cardSection{
+        justify-content:center;
+        .card{
+            margin: 10px;
+            width: 90%;
+            max-width: 90%;
         }
-
-    }
+    }   
+    
 }

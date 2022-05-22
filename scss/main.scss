@@ -13,12 +13,12 @@
 
 /*Layout*/
 @import "layout/navbar";
-@import "layout/sidebar";
+@import "layout/sidenav";
 @import "layout/footer";
 @import "layout/forms";
 @import "layout/appBodyContent";
+@import "layout/tables";
 
 /*Views*/
 @import "views/index";
 @import "views/home";
-@import "views/agendar";

@@ -25,9 +25,9 @@ function agendar(){
 
     $agendar_exec = mysqli_query($con, $agendar_query);
     if($agendar_exec){
-        echo "Cita Creada";
+        echo "Scheduled appointment";
     }else{
-        echo "Falló el registro";
+        echo "Failed appointment";
     }
 }
 ?>

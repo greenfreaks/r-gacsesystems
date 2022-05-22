@@ -11,7 +11,7 @@ body {
   overflow-x: hidden; }
 
 .bodyContent {
-  margin: 30px; }
+  margin: 20px; }
 
 @media screen and (max-width: 768px) {
   body {
@@ -327,27 +327,29 @@ body {
   top: 0;
   z-index: 2;
   padding: 8px 0;
+  background-color: #FAFAFA;
   /*--- Burger Nav---*/ }
   .header__nav .header__nav--burger div {
     width: 20px;
     height: 2px;
-    background-color: #FAFAFA;
+    background-color: #141212;
     margin: 5px;
     transition: all 0.3s ease; }
   .header__nav .header__nav--logo img {
     max-width: 100px; }
   .header__nav .header__nav--content {
+    margin-top: 15px;
     display: flex;
     justify-content: space-around;
-    width: 60%; }
+    width: 50%; }
     .header__nav .header__nav--content a {
       letter-spacing: 1px;
-      color: #141212;
+      color: #168057;
       /* font-weight: bold; */ }
       .header__nav .header__nav--content a:hover {
         transform: translateY(-50px);
         transition: all 0.5s;
-        color: #ED6E30;
+        color: #50c497;
         padding: 15px; }
     .header__nav .header__nav--content .active {
       color: #ED6E30; }
@@ -368,7 +370,7 @@ body {
     height: 92vh;
     top: 11vh;
     flex-direction: column;
-    background-color: #141212;
+    background-color: #FAFAFA;
     align-items: center;
     width: 100%;
     transform: translateX(100%);
@@ -394,67 +396,115 @@ body {
   .toggle .header__nav--burger-3 {
     transform: rotate(45deg) translate(-5px, -7px); } }
 
-.sidebarBurgerBtn {
-  position: absolute;
-  top: 15px;
-  left: 45px;
-  height: 45px;
-  width: 45px;
-  text-align: center;
-  border-radius: 3px;
-  cursor: pointer;
-  transition: left 0.4s ease;
-  z-index: 2; }
-  .sidebarBurgerBtn i {
-    color: #141212;
-    line-height: 45px;
-    font-size: 2em; }
-
-.sidebarBurgerBtn.click {
-  left: 260px; }
-  .sidebarBurgerBtn.click i:before {
-    content: '\f00d';
-    color: #ED6E30; }
-
-.sidebar {
+.sidenav {
   position: fixed;
-  width: 250px;
+  top: 0;
+  left: 0;
   height: 100%;
-  left: -250px;
-  background-color: #141212;
-  transition: left 0.4s ease;
-  z-index: 3; }
-  .sidebar img {
-    max-width: 150px; }
-  .sidebar .text {
-    font-weight: 600;
-    line-height: 65px;
+  width: 240px;
+  background-color: #FAFAFA;
+  padding: 6px 14px; }
+  .sidenav .logo_content .logo {
+    color: #FAFAFA;
+    display: flex;
+    height: 50px;
+    width: 100%;
+    align-items: center; }
+    .sidenav .logo_content .logo i {
+      font-size: 28px;
+      margin-right: 5px; }
+    .sidenav .logo_content .logo .logo_name {
+      font-size: 20px;
+      font-weight: 400; }
+  .sidenav #burgerBtn {
+    position: absolute;
+    color: #141212;
+    left: 90%;
+    top: 6px;
+    font-size: 20px;
+    height: 50px;
+    width: 50px;
     text-align: center;
-    letter-spacing: 1px; }
-  .sidebar ul {
-    background-color: #141212;
-    height: 100%;
-    width: 100%; }
-    .sidebar ul li {
-      line-height: 60px;
-      border-bottom: 1px solid #8190A5; }
-      .sidebar ul li:last-child {
-        border-bottom: 1px solid #ED6E30; }
-      .sidebar ul li a {
-        color: white;
-        text-decoration: none;
-        font-size: 18px;
-        padding-left: 40px;
-        font-weight: 500;
-        display: block;
+    line-height: 50px;
+    transform: translateX(-50%); }
+  .sidenav ul {
+    margin-top: 20px; }
+    .sidenav ul li {
+      position: relative;
+      height: 50px;
+      width: 100%;
+      margin: 0 5px;
+      list-style: none;
+      line-height: 50px;
+      border-radius: 12px; }
+      .sidenav ul li input {
+        position: absolute;
+        height: 100%;
         width: 100%;
-        border-left: 3px solid transparent; }
-        .sidebar ul li a:hover {
-          color: #50c497;
-          border-left-color: #50c497; }
-
-.sidebar.show {
-  left: 0; }
+        left: 0;
+        top: 0;
+        border-radius: 12px;
+        outline: none;
+        border: none;
+        background-color: #FAFAFA;
+        padding-left: 50px;
+        font-size: 18px;
+        color: #141212; }
+      .sidenav ul li .bx-search {
+        position: absolute;
+        z-index: 99;
+        color: #141212;
+        font-size: 22px; }
+      .sidenav ul li a {
+        color: #168057;
+        display: flex;
+        align-items: center;
+        text-decoration: none;
+        transition: all 0.4s ease; }
+        .sidenav ul li a:hover {
+          color: #168057;
+          background-color: #141212; }
+        .sidenav ul li a i {
+          height: 50px;
+          min-width: 50px;
+          border-radius: 12px;
+          line-height: 50px;
+          text-align: center; }
+  .sidenav .profile-content {
+    position: absolute;
+    color: #141212;
+    bottom: 0;
+    left: 0;
+    width: 100%; }
+    .sidenav .profile-content .profile {
+      position: relative;
+      padding: 10px 6px;
+      height: 60px;
+      background: #168057; }
+      .sidenav .profile-content .profile .profile_details {
+        display: flex;
+        align-items: center; }
+        .sidenav .profile-content .profile .profile_details img {
+          height: 45px;
+          width: 45px;
+          object-fit: cover;
+          border-radius: 12px; }
+        .sidenav .profile-content .profile .profile_details .name_job {
+          margin-left: 10px; }
+        .sidenav .profile-content .profile .profile_details .name {
+          font-size: 15px;
+          font-weight: 400; }
+        .sidenav .profile-content .profile .profile_details .job {
+          font-size: 12px; }
+      .sidenav .profile-content .profile #logout {
+        position: absolute;
+        left: 88%;
+        bottom: 5px;
+        transform: translateX(-50%);
+        min-width: 50px;
+        line-height: 50px;
+        font-size: 20px;
+        border-radius: 12px; }
 
 footer {
   background-color: #141212;
@@ -468,7 +518,7 @@ footer {
     footer .footer__logo h2 {
       letter-spacing: 20px;
       font-size: 2.2em;
-      color: #ED6E30; }
+      color: #168057; }
   footer .footer__social {
     padding: 0 50px 200px;
     width: 30%; }
@@ -495,7 +545,7 @@ footer {
           font-size: 0.66667em; }
         footer .footer__credits ul li a {
           text-decoration: none;
-          color: #ED6E30; }
+          color: #168057; }
 
 @media screen and (max-width: 768px) {
   footer .footer__logo {
@@ -533,51 +583,54 @@ footer {
       display: block;
       text-align: center; } }
 
-form input {
-  text-align: center;
-  border: none;
-  border-bottom: 1px solid #141212;
-  margin-bottom: 10px; }
-  form input:focus {
-    outline: none;
-    border-bottom: 2px solid #ED6E30; }
-
-form textarea {
-  min-width: 100%;
-  max-width: 100%;
-  min-height: 150px;
-  max-height: 220px;
-  padding: 20px; }
-  form textarea:focus {
-    outline: none;
-    border: 2px solid #ED6E30; }
-
-form select {
-  font-size: 1.2rem;
-  background-color: white;
-  border: none;
-  border-bottom: solid 2px #168057;
-  margin-bottom: 15px; }
-  form select:focus {
-    outline: none;
-    border-bottom: 2px solid #ED6E30; }
+form {
+  width: 100%; }
+  form input {
+    text-align: center;
+    border: none;
+    border-bottom: 1px solid #141212;
+    margin-bottom: 10px; }
+    form input:focus {
+      outline: none;
+      border-bottom: 2px solid #ED6E30; }
+  form textarea {
+    min-width: 100%;
+    max-width: 100%;
+    min-height: 150px;
+    max-height: 220px;
+    padding: 20px; }
+    form textarea:focus {
+      outline: none;
+      border: 2px solid #ED6E30; }
+  form select {
+    font-size: 1.2rem;
+    background-color: white;
+    border: none;
+    border-bottom: solid 2px #168057;
+    margin-bottom: 15px; }
+    form select:focus {
+      outline: none;
+      border-bottom: 2px solid #ED6E30; }
 
 .appBodyContent {
-  padding: 50px;
-  padding-left: 115px;
-  display: flex;
-  flex-direction: column;
-  align-items: center; }
+  padding: 20px; }
 
 @media screen and (max-width: 768px) {
   .appBodyContent {
-    padding: 40px;
-    padding-top: 70px; } }
+    padding: 10px;
+    padding-top: 5%; } }
 
-@media screen and (max-width: 320px) {
-  .appBodyContent {
-    padding: 20px;
-    padding-top: 60px; } }
+table thead {
+  background-color: #50c497; }
+  table thead tr th {
+    min-width: 200px;
+    max-width: 200px;
+    text-align: center;
+    position: sticky;
+    top: 0; }
+
+table tbody tr td {
+  text-align: center; }
 
 /*Views*/
 .formsContainer {
@@ -646,50 +699,40 @@ form select {
     width: 90%; } }
 
 .cardSection {
-  display: grid;
-  gap: 1.75rem;
-  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); }
+  display: flex;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  width: 100%;
+  min-width: 100%; }
   .cardSection .card {
-    display: flex;
-    flex-wrap: wrap;
-    height: 300px;
     padding: 20px;
-    box-shadow: 0 0 5px 0px #aaa8a8; }
-    .cardSection .card .cardBody .cardBody__observaciones {
-      display: inline-block;
-      width: 1200px; }
+    margin: 20px;
+    width: 30%;
+    max-width: 30%;
+    height: 300px;
+    min-height: 300px;
+    overflow-y: hidden;
+    border-top: #50c497 solid 20px;
+    border-bottom: #168057 solid 5px; }
+    .cardSection .card .cardTitle {
+      border-bottom: 1px solid #8190A5;
+      margin-bottom: 20px; }
+    .cardSection .card .cardBody {
+      display: flex;
+      justify-content: space-around; }
 
 @media screen and (max-width: 768px) {
-  .cardsBodyContent {
-    padding-top: 80px; }
-    .cardsBodyContent .cardSection .card {
-      height: 250px; } }
+  .cardSection {
+    justify-content: space-between; }
+    .cardSection .card {
+      margin: 10px;
+      width: 47%;
+      max-width: 47%; } }
 
 @media screen and (max-width: 480px) {
-  .cardsBodyContent {
-    padding-top: 80px; }
-    .cardsBodyContent .cardSection .card {
-      max-width: 1200px;
-      height: 250px; } }
-
-.agendar {
-  width: 80%; }
-  .agendar .agendarForm {
-    border-top: 80px solid #50c497;
-    display: flex;
-    flex-direction: column;
-    padding: 80px; }
-
-@media screen and (max-width: 768px) {
-  .agendar {
-    width: 100%; } }
-
-@media screen and (max-width: 480px) {
-  .agendar .agendarForm {
-    border-top: 50px solid #50c497;
-    padding: 50px; } }
-
-@media screen and (max-width: 320px) {
-  .agendar .agendarForm {
-    border-top: 30px solid #50c497;
-    padding: 20px; } }
+  .cardSection {
+    justify-content: center; }
+    .cardSection .card {
+      margin: 10px;
+      width: 90%;
+      max-width: 90%; } }

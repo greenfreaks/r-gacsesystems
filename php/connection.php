@@ -13,6 +13,10 @@ $con = mysqli_connect($host, $user, $pass, $db);
 // }else{
 //     echo "Falló conexión";
 // }
+
+// Se incluye clase para el envío de correos
+include "PHPMailer/clsMail.php";
+
 ini_set('display_errors','Off');
 ini_set('error_reporting', E_ALL );
 define('WP_DEBUG', false);

@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 22-05-2022 a las 04:53:05
+-- Tiempo de generación: 22-05-2022 a las 04:57:58
 -- Versión del servidor: 10.4.21-MariaDB
 -- Versión de PHP: 8.0.12
 
@@ -45,6 +45,13 @@ CREATE TABLE `citas` (
   `modifiedAt` timestamp NULL DEFAULT NULL ON UPDATE current_timestamp()
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
+--
+-- Volcado de datos para la tabla `citas`
+--
+
+INSERT INTO `citas` (`id_cita`, `fk_medico`, `nombre_paciente`, `apellido_paciente`, `edad_paciente`, `localidad_paciente`, `tel_paciente`, `email_paciente`, `medio_contacto`, `fecha_cita`, `hora_cita`, `observaciones`, `fk_cita_estatus`, `createdAt`, `modifiedAt`) VALUES
+(32, 17, 'nkcjsd', 'csdc', 46, 'fer5456', '1654684', 'scsd@vsd.com', 'Recepción', '2022-06-02', '16:05:00', 'hje k', 1, '2022-05-22 02:56:45', NULL);
+
 -- --------------------------------------------------------
 
 --
@@ -83,6 +90,13 @@ CREATE TABLE `medicos` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
+-- Volcado de datos para la tabla `medicos`
+--
+
+INSERT INTO `medicos` (`id_medico`, `name_medico`, `email_medico`, `pwd_medico`, `createdAT`, `modifiedAt`) VALUES
+(17, 'Mario Sandoval Velázquez', 'mariosandovalv1998@gmail.com', '123', '2022-05-22 02:55:52', NULL);
+
+--
 -- Índices para tablas volcadas
 --
 
@@ -114,7 +128,7 @@ ALTER TABLE `medicos`
 -- AUTO_INCREMENT de la tabla `citas`
 --
 ALTER TABLE `citas`
-  MODIFY `id_cita` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=32;
+  MODIFY `id_cita` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=33;
 
 --
 -- AUTO_INCREMENT de la tabla `cita_estatus`
@@ -126,7 +140,7 @@ ALTER TABLE `cita_estatus`
 -- AUTO_INCREMENT de la tabla `medicos`
 --
 ALTER TABLE `medicos`
-  MODIFY `id_medico` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
+  MODIFY `id_medico` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=18;
 
 --
 -- Restricciones para tablas volcadas

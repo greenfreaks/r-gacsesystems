@@ -34,6 +34,29 @@
         return false;
       }
 
+      // Animación de validación de datos
+      let timerInterval
+      Swal.fire({
+        title: 'Validando datos',
+        timer: 2300,
+        timerProgressBar: true,
+        didOpen: () => {
+          Swal.showLoading()
+          const b = Swal.getHtmlContainer().querySelector('b')
+          timerInterval = setInterval(() => {
+            b.textContent = Swal.getTimerLeft()
+          }, 100)
+        },
+        willClose: () => {
+          clearInterval(timerInterval)
+        }
+      }).then((result) => {
+        /* Read more about handling dismissals below */
+        if (result.dismiss === Swal.DismissReason.timer) {
+          console.log('I was closed by the timer')
+        }
+      })
+      
       //Envío de datos
       $.ajax({
         url: 'php/login_registro.php',
@@ -46,18 +69,18 @@
 
           //Se muestra alerta al usuario, dependiendo del resulado de su consulta
           if (response == "Login Successful") {
-             Swal.fire({
+            Swal.fire({
               position: 'center',
               icon: 'success',
               title: 'Iniciando sesión',
               showConfirmButton: false,
               timer: 1800
             })
-            setTimeout(function (){
+            setTimeout(function () {
               window.location.reload();
             }, 2000)
-            
-          }else if(response == "Wrong Password"){
+
+          } else if (response == "Wrong Password") {
             Swal.fire({
               position: 'center',
               icon: 'error',
@@ -65,7 +88,7 @@
               showConfirmButton: false,
               timer: 1800
             })
-          }else if(response == "User Not Registered"){
+          } else if (response == "User Not Registered") {
             Swal.fire({
               position: 'center',
               icon: 'warning',
@@ -74,7 +97,7 @@
                         Crear una cuenta</a>`,
               showConfirmButton: false,
             })
-          }else if(response == "User Has Already Taken"){
+          } else if (response == "User Has Already Taken") {
             Swal.fire({
               icon: 'warning',
               title: 'Este usuario ya existe',
@@ -82,14 +105,14 @@
               showConfirmButton: false,
               footer: '<a href="index.php" class ="noDecoration orangeTx boldTx">Iniciar sesión</a>',
             })
-          }else if(response == "Registration Successful"){
+          } else if (response == "Registration Successful") {
             Swal.fire({
               icon: 'success',
               title: 'Registro Exitoso',
               text: 'Ahora puedes iniciar sesión',
               showConfirmButton: false,
             })
-            setTimeout(function (){
+            setTimeout(function () {
               window.location.replace("index.php");
             }, 3000)
           }

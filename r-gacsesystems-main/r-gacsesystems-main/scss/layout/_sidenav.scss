@@ -1,0 +1,139 @@
+.sidenav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 240px;
+    background-color: $white;
+    padding: 6px 14px;
+
+    .logo_content {
+        .logo {
+            color: $white;
+            display: flex;
+            height: 50px;
+            width: 100%;
+            align-items: center;
+
+            i {
+                font-size: 28px;
+                margin-right: 5px;
+            }
+
+            .logo_name {
+                font-size: 20px;
+                font-weight: 400;
+            }
+        }
+    }
+
+    #burgerBtn {
+        position: absolute;
+        color: $black;
+        left: 90%;
+        top: 6px;
+        font-size: 20px;
+        height: 50px;
+        width: 50px;
+        text-align: center;
+        line-height: 50px;
+        transform: translateX(-50%);
+    }
+
+    ul {
+        margin-top: 20px;
+
+        li {
+            position: relative;
+            height: 50px;
+            width: 100%;
+            margin: 0 5px;
+            list-style: none;
+            line-height: 50px;
+            border-radius: 12px;
+            input{
+              position: absolute;  
+              height: 100%;
+              width: 100%;
+              left: 0;
+              top: 0;
+              border-radius: 12px;
+              outline: none;
+              border: none;
+              background-color: $white;
+              padding-left: 50px;
+              font-size: 18px;
+              color: $black;
+            }
+            .bx-search{
+               position: absolute;
+               z-index: 99;
+               color: $black;
+               font-size: 22px;
+            }
+            a{
+                color: $darkBlue;
+                display: flex;
+                align-items: center;
+                text-decoration: none;
+                transition: all 0.4s ease;
+                &:hover{
+                    color: $darkBlue;
+                    background-color: $black;
+                }
+                i{
+                    height: 50px;
+                    min-width: 50px;
+                    border-radius: 12px;
+                    line-height: 50px;
+                    text-align: center;
+                }
+            }
+        }
+    }
+    .profile-content{
+        position: absolute;
+        color: $black;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        .profile{
+            position: relative;
+            padding: 10px 6px;
+            height: 60px;
+            background: $darkBlue;
+            .profile_details{
+                display: flex;
+                align-items: center;
+
+                img{
+                    height: 45px;
+                    width: 45px;
+                    object-fit: cover;
+                    border-radius: 12px;
+                }
+                .name_job{
+                   margin-left: 10px; 
+                }
+                .name{
+                    font-size: 15px;
+                    font-weight: 400;
+                }
+                .job{
+                    font-size: 12px;
+                }
+            }
+            #logout{
+                position: absolute;
+                left: 88%;
+                bottom: 5px;
+                transform: translateX(-50%);
+                min-width: 50px;
+                line-height: 50px;
+                font-size: 20px;
+                border-radius: 12px;
+
+            }
+        }
+    }
+}

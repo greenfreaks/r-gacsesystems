@@ -1,0 +1,51 @@
+.cardSection{
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    width: 100%;
+    min-width: 100%;
+
+    .card{
+        padding: 20px;
+        margin: 20px;
+        width: 30%;
+        max-width: 30%;
+        height: 300px;
+        min-height: 300px;
+        overflow-y: hidden;
+        border-top: $blue solid 20px;
+        border-bottom: $darkBlue solid 5px;
+
+        .cardTitle{
+            border-bottom: 1px solid $lightGray;
+            margin-bottom: 20px;
+        }
+        .cardBody{
+            display: flex;
+            justify-content: space-around;
+        }
+    }
+}
+
+@media screen and(max-width: 768px){
+    .cardSection{
+        justify-content:space-between;
+        .card{
+            margin: 10px;
+            width: 47%;
+            max-width: 47%;
+        }
+    }      
+}
+
+@media screen and(max-width: 480px){
+    .cardSection{
+        justify-content:center;
+        .card{
+            margin: 10px;
+            width: 90%;
+            max-width: 90%;
+        }
+    }   
+    
+}

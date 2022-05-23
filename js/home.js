@@ -1,4 +1,3 @@
-
 $(document).ready(function () {
     let btnAgendar = $('.btnAgendar').click(function () {
         let data = {
@@ -51,6 +50,29 @@ $(document).ready(function () {
             alertify.error(`<b class = "boldTx whiteTx">Añade una observación</b>`);
             return false;
         }
+        // Animación de validación de datos
+        let timerInterval
+        Swal.fire({
+            title: 'Validando registro de cita',
+            timer: 2300,
+            timerProgressBar: true,
+            didOpen: () => {
+                Swal.showLoading()
+                const b = Swal.getHtmlContainer().querySelector('b')
+                timerInterval = setInterval(() => {
+                    b.textContent = Swal.getTimerLeft()
+                }, 100)
+            },
+            willClose: () => {
+                clearInterval(timerInterval)
+            }
+        }).then((result) => {
+            /* Read more about handling dismissals below */
+            if (result.dismiss === Swal.DismissReason.timer) {
+                console.log('I was closed by the timer')
+            }
+        })
+        // Envío de datos
         $.ajax({
             url: '../php/agendarCita.php',
             type: 'post',
@@ -65,18 +87,18 @@ $(document).ready(function () {
                         title: 'Cita agendada correctamente',
                         showConfirmButton: false,
                         timer: 1800
-                      });
-                      setTimeout(function (){
+                    });
+                    setTimeout(function () {
                         window.location.reload();
-                      }, 2000)
-                }else if(response == "Failed appointment"){
+                    }, 2000)
+                } else if (response == "Failed appointment") {
                     Swal.fire({
                         position: 'center',
                         icon: 'error',
                         title: 'No fue posible agendar la cita',
                         showConfirmButton: false,
                         timer: 1800
-                      })
+                    })
                 }
             }
         }); //End Ajax
